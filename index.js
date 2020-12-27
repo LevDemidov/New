@@ -14,6 +14,9 @@ class Car{
             carHtml.width = '300px'
             document.querySelector('.container').appendChild(carHtml)
         }
+        carHtml.style.top = this.y+'px'
+        carHtml.style.left = this.x+'px'
     }
 }
 const tesla = new Car(10,20)
+tesla.drawCar()
