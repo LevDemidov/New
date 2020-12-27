@@ -17,6 +17,11 @@ class Car{
         carHtml.style.top = this.y+'px'
         carHtml.style.left = this.x+'px'
     }
+    moveRight=(v=5)=>{
+        this.x+=v
+        this.drawCar()
+    }
 }
 const tesla = new Car(10,20)
 tesla.drawCar()
+document.addEventListener('keydown', (e)=>{if (e.key==='ArrowRight'){tesla.moveRight(1)}})
